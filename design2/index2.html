@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HoloComs — AI Receptionist</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="crt-overlay"></div>
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ── TICKER ── -->
+  <div class="top-ticker">
+    <div class="ticker-track">
+      <span>HOLOCOMS — AI RECEPTIONIST</span>
+      <span class="sep">◆</span>
+      <span>ZERO HOLD TIME</span>
+      <span class="sep">◆</span>
+      <span>ALWAYS LIVE</span>
+      <span class="sep">◆</span>
+      <span>INTELLIGENT ESCALATION</span>
+      <span class="sep">◆</span>
+      <span>VOICE · CHAT · WEB</span>
+      <span class="sep">◆</span>
+      <span>BUILD STATUS: ALPHA</span>
+      <span class="sep">◆</span>
+      <span>HOLOCOMS — AI RECEPTIONIST</span>
+      <span class="sep">◆</span>
+      <span>ZERO HOLD TIME</span>
+      <span class="sep">◆</span>
+      <span>ALWAYS LIVE</span>
+      <span class="sep">◆</span>
+      <span>INTELLIGENT ESCALATION</span>
+      <span class="sep">◆</span>
+      <span>VOICE · CHAT · WEB</span>
+      <span class="sep">◆</span>
+      <span>BUILD STATUS: ALPHA</span>
+      <span class="sep">◆</span>
+    </div>
+  </div>
+
+  <!-- ── NAV ── -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <a href="#" class="wordmark">HOLO<span>COMS</span></a>
+      <div class="nav-centre mono" id="nav-clock">00:00:00</div>
+      <ul class="nav-links">
+        <li><a href="#manifesto">01</a></li>
+        <li><a href="#system">02</a></li>
+        <li><a href="#features">03</a></li>
+        <li><a href="#access" class="nav-pill">GET ACCESS</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════
+       HERO
+  ══════════════════════════ -->
+  <section id="hero">
+
+    <div class="hero-label mono top-left">SYS:001 — MAIN</div>
+    <div class="hero-label mono top-right"><span class="live-dot"></span>LIVE BUILD</div>
+
+    <div class="hero-main">
+      <div class="hero-left">
+        <div class="hero-sub-line mono">// ARTIFICIAL INTELLIGENCE RECEPTIONIST</div>
+        <h1 class="hero-heading">
+          <span class="line-h" data-text="HOLO">HOLO</span>
+          <span class="line-h accent" data-text="COMS">COMS</span>
+        </h1>
+        <div class="hero-tagline">
+          Your front desk,<br/><em>finally intelligent.</em>
+        </div>
+        <div class="hero-actions">
+          <a href="#access" class="btn-block">REQUEST ACCESS</a>
+          <a href="#system" class="btn-outline">HOW IT WORKS ↓</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="waveform-wrap">
+          <div class="wf-label mono">SIGNAL ACTIVE</div>
+          <div class="waveform" id="waveform">
+            <!-- JS renders bars -->
+          </div>
+          <div class="wf-label mono right">PROCESSING</div>
+        </div>
+
+        <div class="hero-data-grid">
+          <div class="data-cell">
+            <span class="dc-val mono" data-count="0" data-target="100">0</span>
+            <span class="dc-label mono">% UPTIME</span>
+          </div>
+          <div class="data-cell">
+            <span class="dc-val mono" data-count="0" data-target="0">∞</span>
+            <span class="dc-label mono">CONCURRENT</span>
+          </div>
+          <div class="data-cell">
+            <span class="dc-val mono" data-count="0" data-target="24">0</span>
+            <span class="dc-label mono">HR ACTIVE</span>
+          </div>
+          <div class="data-cell">
+            <span class="dc-val mono" data-count="0" data-target="0">&lt;1s</span>
+            <span class="dc-label mono">RESPONSE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-bar">
+      <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       MANIFESTO
+  ══════════════════════════ -->
+  <section id="manifesto">
+    <div class="manifesto-inner">
+      <div class="manifesto-number mono">01</div>
+      <div class="manifesto-body">
+        <p class="manifesto-text reveal-left">
+          Most businesses lose customers in the first 30 seconds. A missed call. A robot menu. A hold tone that never ends.
+        </p>
+        <p class="manifesto-text big reveal-left" data-delay="100">
+          HoloComs ends that.
+        </p>
+        <p class="manifesto-text reveal-left" data-delay="200">
+          We built an AI receptionist that actually listens, actually understands, and actually helps — 24 hours a day, across every channel, without a single moment of hold music.
+        </p>
+        <div class="manifesto-sig mono reveal-left" data-delay="300">
+          — Two developers. One obsession. Zero compromises.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       HOW IT WORKS
+  ══════════════════════════ -->
+  <section id="system">
+    <div class="section-header">
+      <span class="mono sec-num">02</span>
+      <h2 class="sec-title">THE SYSTEM</h2>
+      <span class="mono sec-tag">HOW IT WORKS</span>
+    </div>
+
+    <div class="system-grid">
+      <div class="system-step reveal-up" data-delay="0">
+        <div class="step-num mono">01</div>
+        <div class="step-line"></div>
+        <h3>CALLER ARRIVES</h3>
+        <p>Phone rings, chat opens, or web visitor lands. HoloComs intercepts instantly — no delay, no menu tree, no waiting.</p>
+      </div>
+      <div class="system-arrow mono">→</div>
+      <div class="system-step reveal-up" data-delay="120">
+        <div class="step-num mono">02</div>
+        <div class="step-line"></div>
+        <h3>AI UNDERSTANDS</h3>
+        <p>Natural language processing reads intent in milliseconds. It already knows your business, your FAQs, your calendar.</p>
+      </div>
+      <div class="system-arrow mono">→</div>
+      <div class="system-step reveal-up" data-delay="240">
+        <div class="step-num mono">03</div>
+        <div class="step-line"></div>
+        <h3>ACTION TAKEN</h3>
+        <p>Books the appointment. Answers the question. Transfers with context. Every time. No scripts. No errors.</p>
+      </div>
+      <div class="system-arrow mono">→</div>
+      <div class="system-step reveal-up" data-delay="360">
+        <div class="step-num mono">04</div>
+        <div class="step-line"></div>
+        <h3>YOU SEE IT ALL</h3>
+        <p>Full log. Sentiment score. Resolution status. Your dashboard shows everything HoloComs handled while you focused.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       FEATURES / STATUS
+  ══════════════════════════ -->
+  <section id="features">
+    <div class="section-header">
+      <span class="mono sec-num">03</span>
+      <h2 class="sec-title">CAPABILITIES</h2>
+      <span class="mono sec-tag">BUILD STATUS</span>
+    </div>
+
+    <div class="feat-table">
+      <div class="feat-header mono">
+        <span>MODULE</span>
+        <span>STATUS</span>
+        <span>PROGRESS</span>
+        <span>CHANNEL</span>
+      </div>
+
+      <div class="feat-row reveal-up" data-delay="0">
+        <div class="feat-name">
+          <span class="feat-icon">▶</span>
+          <div>
+            <strong>Voice Recognition</strong>
+            <span class="mono feat-desc">Natural speech-to-intent pipeline</span>
+          </div>
+        </div>
+        <span class="status-pill live">LIVE</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:91%"></div><span class="mono">91%</span></div>
+        <span class="channel-tag mono">PHONE</span>
+      </div>
+
+      <div class="feat-row reveal-up" data-delay="60">
+        <div class="feat-name">
+          <span class="feat-icon">▶</span>
+          <div>
+            <strong>FAQ &amp; Knowledge Engine</strong>
+            <span class="mono feat-desc">Business-trained knowledge base</span>
+          </div>
+        </div>
+        <span class="status-pill live">LIVE</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:88%"></div><span class="mono">88%</span></div>
+        <span class="channel-tag mono">ALL</span>
+      </div>
+
+      <div class="feat-row reveal-up" data-delay="120">
+        <div class="feat-name">
+          <span class="feat-icon">◐</span>
+          <div>
+            <strong>Appointment Scheduling</strong>
+            <span class="mono feat-desc">Direct calendar write access</span>
+          </div>
+        </div>
+        <span class="status-pill building">BUILDING</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:72%"></div><span class="mono">72%</span></div>
+        <span class="channel-tag mono">PHONE</span>
+      </div>
+
+      <div class="feat-row reveal-up" data-delay="180">
+        <div class="feat-name">
+          <span class="feat-icon">◐</span>
+          <div>
+            <strong>Caller ID &amp; Memory</strong>
+            <span class="mono feat-desc">Returning caller recognition</span>
+          </div>
+        </div>
+        <span class="status-pill building">BUILDING</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:55%"></div><span class="mono">55%</span></div>
+        <span class="channel-tag mono">PHONE</span>
+      </div>
+
+      <div class="feat-row reveal-up" data-delay="240">
+        <div class="feat-name">
+          <span class="feat-icon">◐</span>
+          <div>
+            <strong>Sentiment Analysis</strong>
+            <span class="mono feat-desc">Emotional tone detection + response</span>
+          </div>
+        </div>
+        <span class="status-pill building">BUILDING</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:38%"></div><span class="mono">38%</span></div>
+        <span class="channel-tag mono">ALL</span>
+      </div>
+
+      <div class="feat-row reveal-up locked-row" data-delay="300">
+        <div class="feat-name">
+          <span class="feat-icon">○</span>
+          <div>
+            <strong>Live Escalation Engine</strong>
+            <span class="mono feat-desc">Seamless human handoff protocol</span>
+          </div>
+        </div>
+        <span class="status-pill planned">PLANNED</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:12%"></div><span class="mono">12%</span></div>
+        <span class="channel-tag mono">ALL</span>
+      </div>
+
+      <div class="feat-row reveal-up locked-row" data-delay="360">
+        <div class="feat-name">
+          <span class="feat-icon">○</span>
+          <div>
+            <strong>CRM Sync</strong>
+            <span class="mono feat-desc">Auto-log to Salesforce, HubSpot +</span>
+          </div>
+        </div>
+        <span class="status-pill planned">PLANNED</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:5%"></div><span class="mono">5%</span></div>
+        <span class="channel-tag mono">API</span>
+      </div>
+
+      <div class="feat-row reveal-up locked-row" data-delay="420">
+        <div class="feat-name">
+          <span class="feat-icon">○</span>
+          <div>
+            <strong>Analytics Dashboard</strong>
+            <span class="mono feat-desc">Volume, resolution, sentiment trends</span>
+          </div>
+        </div>
+        <span class="status-pill planned">PLANNED</span>
+        <div class="feat-prog"><div class="prog-fill" style="--w:3%"></div><span class="mono">3%</span></div>
+        <span class="channel-tag mono">WEB</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       SIGNAL STRIP (stats)
+  ══════════════════════════ -->
+  <div class="signal-strip">
+    <div class="signal-item">
+      <span class="sig-num mono counter" data-target="847">0</span>
+      <span class="sig-label mono">TEST CALLS PROCESSED</span>
+    </div>
+    <div class="sig-div"></div>
+    <div class="signal-item">
+      <span class="sig-num mono counter" data-target="99">0</span><span class="sig-num mono">%</span>
+      <span class="sig-label mono">UPTIME TARGET</span>
+    </div>
+    <div class="sig-div"></div>
+    <div class="signal-item">
+      <span class="sig-num mono">&lt;1s</span>
+      <span class="sig-label mono">AVG RESPONSE TIME</span>
+    </div>
+    <div class="sig-div"></div>
+    <div class="signal-item">
+      <span class="sig-num mono counter" data-target="2">0</span>
+      <span class="sig-label mono">DEVELOPERS OBSESSED</span>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════
+       EARLY ACCESS
+  ══════════════════════════ -->
+  <section id="access">
+    <div class="access-inner">
+      <div class="access-left">
+        <span class="mono sec-num-lg">04</span>
+        <h2 class="access-heading">GET<br/>EARLY<br/>ACCESS</h2>
+        <p class="access-sub mono">Limited spots. No cost. <br/>We onboard personally.</p>
+        <div class="access-note mono">
+          <span class="live-dot"></span>
+          Currently accepting applications
+        </div>
+      </div>
+
+      <div class="access-right">
+        <form id="access-form">
+          <div class="field-group">
+            <label class="mono">NAME</label>
+            <input type="text" id="f-name" placeholder="Jane Smith" />
+          </div>
+          <div class="field-group">
+            <label class="mono">BUSINESS</label>
+            <input type="text" id="f-biz" placeholder="Acme Ltd" />
+          </div>
+          <div class="field-group">
+            <label class="mono">EMAIL</label>
+            <input type="email" id="f-email" placeholder="you@yourco.com" />
+          </div>
+          <div class="field-group">
+            <label class="mono">INDUSTRY</label>
+            <select id="f-industry">
+              <option value="" disabled selected>— SELECT —</option>
+              <option>Healthcare / Medical</option>
+              <option>Legal Services</option>
+              <option>Beauty &amp; Wellness</option>
+              <option>Hospitality</option>
+              <option>Retail</option>
+              <option>Finance</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <button type="submit" class="btn-block full">
+            SUBMIT REQUEST →
+          </button>
+          <p class="form-note mono">// No card. No spam. We'll reach out directly.</p>
+        </form>
+        <div class="form-success" id="form-success">
+          <div class="success-icon">✓</div>
+          <p class="mono">REQUEST RECEIVED.</p>
+          <p class="mono dim">We'll be in touch soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════
+       FOOTER
+  ══════════════════════════ -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="wordmark large">HOLO<span>COMS</span></div>
+        <p class="mono">hello@holocoms.ai</p>
+        <p class="mono dim">Built in England. Shipping everywhere.</p>
+      </div>
+      <div class="footer-mid mono">
+        <p>VOICE AI RECEPTIONIST</p>
+        <p>ALPHA BUILD · v0.7</p>
+        <p><span class="live-dot"></span> ALWAYS BUILDING</p>
+      </div>
+      <div class="footer-right mono">
+        <a href="#">Twitter / X</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <span class="dim">© 2025 HoloComs</span>
+      </div>
+    </div>
+    <div class="footer-bottom-bar"></div>
+  </footer>
+
+  <script src="script2.js"></script>
+</body>
+</html>
